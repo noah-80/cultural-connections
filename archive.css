@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Shippori Antique";
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FD92A7;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Ensure body is positioned relative to contain absolutely positioned elements */
+}
+
+/* Styling for the text */
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Allow text to sit on top of #smallrectangle */
+    z-index: 1; /* Ensure text stays above the circle */
+    text-align: center;
+}
+
+#titlewhite {
+    color: white;
+    font-size: 24px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.titleblack {
+    font-size: 100px;
+    transition: opacity 0.5s ease, margin 0.5s ease; /* Add margin transition */
+}
+
+/* Styling for the circle (#smallrectangle) */
+#smallrectangle {
+    border-radius: 50%; /* Ensure it's circular */
+    width: 120px;
+    height: 120px;
+    background: #FFF;
+    filter: blur(30px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease; /* Smooth transition for width and height */
+    z-index: 0; /* Ensure the circle stays behind the text */
+}
+
+/* Styling for fade-out effect on text */
+.title:hover .titlewhite {
+    opacity: 0; /* Fade out the white text */
+}
+
+.title:hover #smallrectangle {
+    opacity: 1;
+}
+
+/* Styling for keeping "CULTURAL" and "CONNECTIONS" centered and visible */
+.title .titleblack:nth-of-type(1), .title .titleblack:nth-of-type(2) {
+    opacity: 1; /* Always keep them visible */
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the arrow */
+    text-decoration: none;
+    z-index: 2; /* Ensure the arrows are above the circle and text */
+}
+
+.left-arrow {
+    left: 77px;
+}
+
+.right-arrow {
+    right: 77px;
+}
+
+.arrow img {
+    width: 30px; /* Adjust size of the arrow image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.title:hover #titlewhite {
+    opacity: 0; /* Fade out all #titlewhite elements */
+    transition: opacity 0.5s ease;
+}
+
+.title:hover #maintitle #cultural {
+    margin-bottom: -200px;
+}
+
+
+.title:hover #maintitle #connections br {
+    margin-top: -200px;
+}
+
+.title:hover #smallrectangle {
+    width: 750px;
+    height: 750px;
+}

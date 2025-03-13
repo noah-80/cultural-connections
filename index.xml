@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="Icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Connections</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Shippori Antique";
+        }
+
+        body {
+            background-color: #FD92A7;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            cursor: url('mycursor.svg') 16 16, auto;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            top: 29px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .story {
+            width: 47px;
+            height: 13px;
+            border-radius: 20px;
+            margin-right: 5px;
+            background-color: white;
+        }
+
+        #story1 {
+            background-color: #F44464;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+            
+        }
+
+        #titlewhite {
+            color: white;
+            font-size: 24px;
+            transition: opacity 0.5s ease;
+        }
+
+        .titleblack {
+            font-size: 100px;
+            transition: margin 0.5s ease;
+               color: transparent;
+   text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+
+        #smallrectangle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #FFF;
+            filter: blur(30px);
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: glow 1.5s infinite ease-in-out;
+        }
+
+        .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FD92A7;
+            font-size: 18px;
+            text-align: center;
+            opacity: 0;
+            padding-top: 350px;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .title:hover #titlewhite {
+            opacity: 0;
+        }
+
+        .title:hover .hover-text {
+            opacity: 1;
+        }
+
+        @keyframes glow {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.33); }
+        }
+
+        .expanded {
+            animation: none !important;
+            transform: translate(-50%, -50%) scale(6.25);
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .right-arrow {
+            right: 77px;
+        }
+
+        .titleblack {
+    color: rgba(0,0,0,0.7); /* Semi-transparent black */
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+    filter: blur(1px); /* Additional blur effect */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Top bar and content same as before -->
+    <div class="top-bar">
+        <!-- Story elements same as before -->
+    </div>
+
+    <div class="title">
+        <!-- Title elements same as before -->
+    </div>
+
+    <div id="smallrectangle"></div>
+    <a href="2.html" class="arrow right-arrow">
+        <img src="RightWhite.svg" alt="Right Arrow">
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const title = document.querySelector('.title');
+            const smallRect = document.getElementById('smallrectangle');
+            let isAnimating = false;
+
+            title.addEventListener('mouseenter', () => {
+                if (isAnimating) return;
+                isAnimating = true;
+                
+                // Capture current scale
+                const currentScale = parseFloat(
+                    getComputedStyle(smallRect).transform.split(',')[3] || 1
+                );
+                
+                // Reset animation and set initial scale
+                smallRect.style.transform = `translate(-50%, -50%) scale(${currentScale})`;
+                smallRect.classList.add('expanded');
+            });
+
+            title.addEventListener('mouseleave', () => {
+                isAnimating = false;
+                smallRect.classList.remove('expanded');
+            });
+        });
+
+        // Navigation script same as before
+    </script>
+</body>
+</html>
