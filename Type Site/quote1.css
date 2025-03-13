@@ -1,0 +1,200 @@
+* {
+    font-family: "Shippori Antique";
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the arrow */
+    text-decoration: none;
+    z-index: 2; /* Ensure the arrows are above the circle and text */
+}
+
+.left-arrow {
+    left: 77px;
+}
+
+.right-arrow {
+    right: 77px;
+}
+
+.arrow img {
+    width: 30px; /* Adjust size of the arrow image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* WALL */
+
+.answer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size:60px;
+    padding-left: 200px;
+    padding-right:200px;
+}
+
+.hoverline {
+    display: flex;
+    align-self: center;
+    padding-left:651px;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position:absolute
+}
+
+.hoverline .hoverarea {
+    width: 260px;
+    height: 87px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    background-color: #ad2f2f00;
+    filter: blur(30px);
+    z-index:200;
+}
+
+.fuzzy-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Place it behind the text */
+    width:912px;
+}
+
+.fuzzy-background {
+    width: 260px; /* Adjust width to fit behind the text */
+    height: 87px; /* Adjust height to fit behind the text */
+    background-color: #FD92A7;
+    filter: blur(30px);
+    float:right;
+}
+
+/* WALL 
+
+*/
+
+.answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 60px;
+    padding-left: 200px;
+    padding-right: 200px;
+    position: relative;
+}
+
+.original-text, .new-text {
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+
+.original-text {
+    opacity: 1;
+}
+
+.new-text {
+    opacity: 0;
+}
+
+.fuzzy-background {
+    width: 260px;
+    height: 87px;
+    background-color: #FD92A7;
+    filter: blur(30px);
+    float: right;
+    transition: all 0.5s ease;
+    animation: pulse 0.6s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15); /* Increase size by 15% */
+    }
+}
+
+.fuzzy-background {
+    width: 260px;
+    height: 87px;
+    background-color: #FD92A7;
+    filter: blur(30px);
+    float: right;
+    transition: all 0.5s ease;
+    animation: pulse 0.6s infinite alternate;
+}
+
+.hoverarea:hover ~ .fuzzy-container .fuzzy-background {
+    animation: none;
+    width: 912px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(253, 146, 167, 0.7);
+    }
+    100% {
+        transform: scale(1.5);
+        box-shadow: 0 0 0 20px rgba(253, 146, 167, 0);
+    }
+}
+
+.fuzzy-background {
+    /* ... existing properties ... */
+    box-shadow: 0 0 0 0 rgba(253, 146, 167, 0.7);
+    animation: pulse 0.3s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px 0 rgba(253, 146, 167, 0.7);
+    }
+    100% {
+        transform: scale(1.15);
+        box-shadow: 0 0 40px 20px rgba(253, 146, 167, 0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 20px 0 rgba(253, 146, 167, 0.3);
+    }
+    50% {
+        transform: scale(1.3);
+        box-shadow: 0 0 40px 20px rgba(253, 146, 167, 0);
+    }
+}
+
+.fuzzy-background {
+    width: 260px;
+    height: 90px;
+    background-color: #FD92A7;
+    filter: blur(30px);
+    transition: width 0.5s ease;
+    animation: pulse 1.3s infinite ease-in-out;
+    transform-origin: center;
+}
+
+/* Hover state */
+.hoverarea:hover ~ .fuzzy-container .fuzzy-background {
+    width: 700px;
+    animation-play-state: paused;
+}

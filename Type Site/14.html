@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="Icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Connections</title>
+    <link rel="stylesheet" href="answersindex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+<style>
+  
+    .highlight-container {
+      position: relative;
+      display: inline;
+      background-color: #FFC5D1;
+      padding: 2px 0;
+  }
+  
+  .popup-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #FFC5D1;
+      color: black;
+      font-size: 18px;
+      padding: 20px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+      transform: translateY(100%);
+  }
+  
+  
+  /* adjust */
+  
+  /* Highlight container */
+  .highlight-container {
+      position: relative;
+      display: inline;
+      background: linear-gradient(to bottom, transparent 70%, #FFC5D1 70%);
+  }
+  
+  /* Pop-up bar */
+  .popup-bar {
+      position: fixed;
+      bottom: -80px; /* Initially hidden below viewport */
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #FFC5D1;
+      color: black;
+      font-size: 18px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 20px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+      transform: translateY(100%); /* Start fully hidden */
+  }
+  
+  .highlight-container:hover .popup-bar {
+      transform: translateY(-60px); /* Slide up on hover */
+  }
+  
+  
+  /* Hover effect for pop-up */
+  .highlight-container:hover {
+      transform: translateY(-60px); /* Slides pop-up into view */
+  }
+  
+  
+  
+  </style>
+</head>
+<body>
+    <div class="top-bar" style="display: flex; justify-content: flex-start; align-items: center; position: absolute; top: 29px; left: 20px; right: 20px;">
+        <div class="story" id="story1" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story2" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story3" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story4" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story5" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story6" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story7" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story8" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story9" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story10" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story11" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story12" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story13" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story14" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #F44464;"></div>
+        <div class="story" id="story15" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story16" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story17" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story18" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story19" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story20" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story21" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story22" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story23" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story24" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story25" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story26" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story27" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story28" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story29" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story30" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story31" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story32" style="width: 48px; height: 13px; border-radius: 20px; margin-right: 5px; background-color: #D9D9D9;"></div>
+        <div class="story" id="story33" style="width: 47px; height: 13px; border-radius: 20px; margin-right: 0; background-color: #D9D9D9;"></div>
+    </div>
+
+    <div class="answer">
+        <p>
+        It’s interesting because I’ve never—this is a California thing—I’ve
+         never felt like a minority. And that’s only because I live in California, 
+         and specifically I lived in South Bay, like <span class="highlight-container">NorCal<span class="popup-bar">Northern California</span></span>, South Bay Area,
+          where my neighborhood is only Chinese people pretty much. So I always grew up being around people who are just like me, who look like me, and coming to UCLA is also not that different.<br><br>
+
+        I noticed, both my roommates are ethnically Chinese, and there’s a certain just understanding, unspoken understanding that we have between us. The shows we watch are the same, the way we think is also just the same. And that’s been a constant for me in a lot of my life. And I noticed that gap when I’m talking to people who are not Chinese, obviously, but I don’t think it hinders me making friendships with anyone. I just notice I like, I just share, I naturally share a lot of commonalities with people of my background here, which makes it easy to bond.
+    </p>
+    </div>
+
+<!-- Arrows -->
+<a href="13.html" class="arrow left-arrow" style="left: 77px;">
+    <img src="LeftGrey.svg" alt="Left Arrow">
+</a> <!-- Left arrow -->
+<a href="15.html" class="arrow right-arrow" style="right: 77px;">
+    <img src="RightGrey.svg" alt="Right Arrow">
+</a> <!-- Right arrow -->
+
+<script src="scriptsindex.js"></script>
+
+
+</body>
+</html>

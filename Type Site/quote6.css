@@ -1,0 +1,184 @@
+* {
+    font-family: "Shippori Antique";
+}
+
+body {
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the arrow */
+    text-decoration: none;
+    z-index: 2; /* Ensure the arrows are above the circle and text */
+}
+
+.left-arrow {
+    left: 77px;
+}
+
+.right-arrow {
+    right: 77px;
+}
+
+.arrow img {
+    width: 30px; /* Adjust size of the arrow image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.answer {
+    display:flex;
+    justify-content: center;
+    height: 100vh;
+    position:absolute;
+    font-size:60px;
+    padding-left: 200px;
+    padding-right:200px;
+    left:45%;
+    top:7.8%;
+    line-height: 70px;
+}
+
+#firsttext {
+    display: flex;
+    align-items: center;
+    font-size:60px;
+    height:auto;
+    left: 5%;
+    top: 33%;
+
+    position: absolute;
+}
+
+.cleartext {
+    color:rgba(137, 43, 226, 0);
+}
+
+.fuzzy1 {
+    width: 330px;
+    height: 120px;
+    background: #FD92A7;
+    flex-shrink: 0;
+    filter: blur(30px);
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    z-index: -1;
+}
+
+
+
+
+.hoverarea {
+    background-color: rgba(0, 0, 0, 0);
+    position:absolute;
+    width: 270px;
+    height: 90px;
+    left: 53%;
+    top: 33%;
+    z-index:10;
+}
+
+#firsttext, #secondtext {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  #secondtext {
+    opacity: 0;
+  }
+
+  #firsttext {
+    position: absolute;
+    left: 5%;
+    top: 33.3%;
+  }
+  
+  /* test */
+
+  #firsttext {
+    position: absolute;
+    left: 70px;
+    top: 290px;
+}
+
+#secondtext {
+    position: absolute;
+    left: 600px;
+    top: 80px;
+}
+
+
+
+/* test */
+
+.fuzzy1 {
+    transition: all 0.5s ease-in-out;
+    background: #FD92A7;
+    filter: blur(30px);
+    position: absolute;
+    z-index: -1;
+}
+
+.fuzzy1 {
+    width: 330px;
+    height: 120px;
+    left: 50%;
+    top: 34%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.fuzzy2 {
+    width: 87px;
+    height: 680px;
+    left: 52%;
+    top: 10%;
+    opacity: 0;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.hoverarea {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    width: 270px;
+    height: 90px;
+    left: 53%;
+    top: 33%;
+    z-index: 10;
+}
+
+.fuzzy1, .fuzzy2 {
+    transition: all 0.5s ease-in-out;
+    background: #FD92A7;
+    filter: blur(30px);
+    position: absolute;
+    z-index: -1;
+}
+
+.fuzzy1 {
+    width: 330px;
+    height: 120px;
+    left: 50%;
+    top: 33%;
+    animation: pulse 1.5s ease-in-out infinite; /* Glowing animation */
+}
+
+.fuzzy2 {
+    width: 87px;
+    height: 680px;
+    left: 52%;
+    top: 10%;
+    opacity: 0; /* No animation */
+}
+
