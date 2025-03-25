@@ -39,30 +39,37 @@ body {
 }
 
 .fuzzy1, .fuzzy2 {
-    transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .fuzzy1 {
-    width: 550px;
+    width: 478px;
     height: 350px;
     background: #FD92A7;
     flex-shrink: 0;
     filter: blur(30px);
     position: absolute;
-    left: 20%;
-    top: 30%;
+    top: 50%;
+    right: 48%;
+    margin-top: -150px;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
     z-index: -1;
 }
 
 .fuzzy2 {
-    width: 550px;
+    width: 478px;
     height: 350px;
     background: #FD92A7;
     flex-shrink: 0;
     filter: blur(30px);
     position: absolute;
-    left: 45%;
-    top: 30%;
+    top: 50%;
+    margin-top: -155px;
+
+    left:48%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
     z-index: -1;
 }
 
@@ -71,13 +78,19 @@ body {
     height: 220px;
     left: 10%;
     top: 48%;
+    margin-top:0px;
+
 }
 
 .hovered .fuzzy2 {
     width: 450px;
     height: 220px;
-    left: 60%;
+    right:10%;
     top: 48%;
+    left: auto;
+    margin-top:0px;
+
+
 }
 
 
@@ -102,7 +115,7 @@ body {
     text-align: right;
     display:flex;
     position:absolute;
-    left: 53%;
+    right:13%;
     top:0%;
 }
 

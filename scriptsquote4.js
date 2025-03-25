@@ -49,22 +49,23 @@ document.addEventListener('keydown', function(event) {
 // expanding
 
 // Select the hover area and fuzzy element
-const hoverArea = document.querySelector('.answer'); // Assuming 'answer' is the hover area
+const hoverArea = document.querySelector('.hoverarea'); // Assuming 'answer' is the hover area
 const fuzzy = document.querySelector('.fuzzy');
 
 // Add event listeners for hover (mouseenter and mouseleave)
 hoverArea.addEventListener('mouseenter', () => {
     fuzzy.style.transition = 'all 0.5s'; // Smooth transition
-    fuzzy.style.width = '390px';
-    fuzzy.style.height = '120px';
-    fuzzy.style.left = '35%';
-    fuzzy.style.top = '23%';
+    fuzzy.style.width = '900px';
+    fuzzy.style.height = '575px';
+    fuzzy.style.marginTop = '30px';
+    fuzzy.style.marginRight = '0px';
+
 });
 
 hoverArea.addEventListener('mouseleave', () => {
     fuzzy.style.transition = 'all 0.5s'; // Smooth transition
-    fuzzy.style.width = '900px';
-    fuzzy.style.height = '575px';
-    fuzzy.style.left = '20%';
-    fuzzy.style.top = '17%';
+    fuzzy.style.width = '390px';
+    fuzzy.style.height = '120px';
+    fuzzy.style.marginRight = '70px';
+    fuzzy.style.marginTop = '-340px';
 });

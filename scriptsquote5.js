@@ -84,13 +84,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const hoverArea = document.querySelector('.hoverarea');
-    const body = document.body; // Use the body or a parent container to apply the class
+    const body = document.body;
+    let hoverTimeout;
 
     hoverArea.addEventListener('mouseenter', function() {
-        body.classList.add('hovered'); // Add the class to trigger the hover state
+        clearTimeout(hoverTimeout);
+        body.classList.add('hovered');
     });
 
     hoverArea.addEventListener('mouseleave', function() {
-        body.classList.remove('hovered'); // Remove the class to revert to the initial state
+        hoverTimeout = setTimeout(() => {
+            body.classList.remove('hovered');
+        }, 50);
     });
 });
+
