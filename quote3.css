@@ -40,6 +40,8 @@ body {
     font-size:60px;
     padding-left: 200px;
     padding-right:200px;
+    transition: top 0.5s ease; /* Smooth transition */
+
 }
 
 .pink {
@@ -54,14 +56,15 @@ flex-shrink: 0;
 background: #FD92A7;
 filter: blur(25px);
 position: absolute;
-top:55%;
-left:11%;
 transition: top 0.5s ease; /* Smooth transition */
+margin-left:-40px;
+margin-top:190px;
 
 }
 
-.fuzzy-up {
-    top: 46%; /* Alternate position */
+.fuzzy-up { /* Alternate position */
+    margin-top:20px;
+    transition: top 0.5s ease; /* Smooth transition */
 }
 
 /* fuzzy anim */
