@@ -27,7 +27,7 @@ function navigateStory(direction) {
         }
     } else if (direction === 'right') {
         // If we're on page 33, move to index.html
-        if (currentStoryNumber === 33) {
+        if (currentStoryNumber === 32) {
             window.location.href = 'index.html'; // Navigate back to index.html when right arrow is pressed on story 33
             return;
         } else {
