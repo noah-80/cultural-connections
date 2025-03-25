@@ -38,8 +38,8 @@ body {
     height: 100vh;
     text-align: left;
     font-size:60px;
-    padding-left: 200px;
-    padding-right:200px;
+    padding-left: 10vw;
+    padding-right:10vw;
     transition: top 0.5s ease; /* Smooth transition */
 
 }
