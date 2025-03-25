@@ -138,7 +138,7 @@
         .arrow img {
     width: 30px; /* Adjust size of the arrow image */
     height: auto; /* Maintain aspect ratio */
-}
+    }
 
 
 .title:hover #cultural {
@@ -173,66 +173,98 @@
     height: 750px;
 }
 
+@media screen {
+    #mobile-message {
+        display:none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #site-content {
+        display: none;
+    }
+
+    #mobile-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        height: 100vh;
+        background-color: #FD92A7;
+    }
+}
+
+
 
     </style>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="story" id="story1"></div>
-        <div class="story" id="story2"></div>
-        <div class="story" id="story3"></div>
-        <div class="story" id="story4"></div>
-        <div class="story" id="story5"></div>
-        <div class="story" id="story6"></div>
-        <div class="story" id="story7"></div>
-        <div class="story" id="story8"></div>
-        <div class="story" id="story9"></div>
-        <div class="story" id="story10"></div>
-        <div class="story" id="story11"></div>
-        <div class="story" id="story12"></div>
-        <div class="story" id="story13"></div>
-        <div class="story" id="story14"></div>
-        <div class="story" id="story15"></div>
-        <div class="story" id="story16"></div>
-        <div class="story" id="story17"></div>
-        <div class="story" id="story18"></div>
-        <div class="story" id="story19"></div>
-        <div class="story" id="story20"></div>
-        <div class="story" id="story21"></div>
-        <div class="story" id="story22"></div>
-        <div class="story" id="story23"></div>
-        <div class="story" id="story24"></div>
-        <div class="story" id="story25"></div>
-        <div class="story" id="story26"></div>
-        <div class="story" id="story27"></div>
-        <div class="story" id="story28"></div>
-        <div class="story" id="story29"></div>
-        <div class="story" id="story30"></div>
-        <div class="story" id="story31"></div>
-        <div class="story" id="story32"></div>
+    <div id="site-content">
+        <div class="top-bar">
+            <div class="story" id="story1"></div>
+            <div class="story" id="story2"></div>
+            <div class="story" id="story3"></div>
+            <div class="story" id="story4"></div>
+            <div class="story" id="story5"></div>
+            <div class="story" id="story6"></div>
+            <div class="story" id="story7"></div>
+            <div class="story" id="story8"></div>
+            <div class="story" id="story9"></div>
+            <div class="story" id="story10"></div>
+            <div class="story" id="story11"></div>
+            <div class="story" id="story12"></div>
+            <div class="story" id="story13"></div>
+            <div class="story" id="story14"></div>
+            <div class="story" id="story15"></div>
+            <div class="story" id="story16"></div>
+            <div class="story" id="story17"></div>
+            <div class="story" id="story18"></div>
+            <div class="story" id="story19"></div>
+            <div class="story" id="story20"></div>
+            <div class="story" id="story21"></div>
+            <div class="story" id="story22"></div>
+            <div class="story" id="story23"></div>
+            <div class="story" id="story24"></div>
+            <div class="story" id="story25"></div>
+            <div class="story" id="story26"></div>
+            <div class="story" id="story27"></div>
+            <div class="story" id="story28"></div>
+            <div class="story" id="story29"></div>
+            <div class="story" id="story30"></div>
+            <div class="story" id="story31"></div>
+            <div class="story" id="story32"></div>
+        </div>
+    
+        <div class="title">
+            <div id="titlewhite">CHINESE AMERICAN IDENTITY</div>
+            <div id="maintitle">
+                <div class="titleblack" id="cultural">CULTURAL</div><br><br><br><br><br><br><br>
+                <div class="titleblack" id="connections">CONNECTIONS</div>
+            </div>
+            <div id="titlewhite">INTERVIEW WITH ELISE CHEE</div>
+            <div id="titlewhite">BY NOAH HRUNG</div>
+    
+            <div class="hover-text">
+                <p>It’s a California thing.</p><br>
+                <p>Chinese American identity, as told by</p>
+                <p>Bay Area native and UCLA first-year Elise Chee.</p><br>
+                <p>Interview and site by Noah Hrung.</p>
+            </div>
+        </div>
+    
+        <div id="smallrectangle"></div>
+        <a href="2.html" class="arrow right-arrow">
+            <img src="RightWhite.svg" alt="Right Arrow">
+        </a>
+
     </div>
 
-    <div class="title">
-        <div id="titlewhite">CHINESE AMERICAN IDENTITY</div>
-        <div id="maintitle">
-            <div class="titleblack" id="cultural">CULTURAL</div><br><br><br><br><br><br><br>
-            <div class="titleblack" id="connections">CONNECTIONS</div>
-        </div>
-        <div id="titlewhite">INTERVIEW WITH ELISE CHEE</div>
-        <div id="titlewhite">BY NOAH HRUNG</div>
-
-        <div class="hover-text">
-            <p>It’s a California thing.</p><br>
-            <p>Chinese American identity, as told by</p>
-            <p>Bay Area native and UCLA first-year Elise Chee.</p><br>
-            <p>Interview and site by Noah Hrung.</p>
-        </div>
+    <div id="mobile-message">
+        This website is currently only available for desktop browsers.
     </div>
-
-    <div id="smallrectangle"></div>
-    <a href="2.html" class="arrow right-arrow">
-        <img src="RightWhite.svg" alt="Right Arrow">
-    </a>
+    
 
     <script>
 
@@ -257,5 +289,6 @@ document.addEventListener('keydown', function(event) {
         });
 
     </script>
+
 </body>
 </html>
